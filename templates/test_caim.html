@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CA Image Search test</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,maximum-scale=2" />
+</head>
+<body style="margin-left: 25px; margin-top: 25px;">
+
+    <strong>/UPLOAD</strong>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label>
+            ID zdjecia:
+            <input type="text" name="img_id">
+        </label>
+        <br/>
+
+        <label>
+            Metadata:
+            <input type="text" name="metadata" value='{"elem_id": ""}'>
+        </label>
+        <br/>
+
+        <label>
+            File:
+            <input type="file" name="file"/>
+        </label>
+        <br/>
+
+        <input type="submit" value="Upload"/>
+    </form>
+    <br/>
+    <br/>
+
+    <strong>/SEARCH</strong>
+    <form action="/search" method="post" enctype="multipart/form-data">
+        <label>
+            File:
+            <input type="file" name="file"/>
+        </label>
+        <br/>
+
+        <input type="submit" value="Search"/>
+    </form>
+    <br/>
+    <br/>
+
+    <strong>/DELETE</strong>
+    <form action="/delete" method="post" enctype="multipart/form-data">
+        <label>
+            ID zdjecia:
+            <input type="text" name="img_id">
+        </label>
+        <br/>
+
+        <input type="submit" value="Upload"/>
+    </form>
+    <br/>
+    <br/>
+
+</body>
+</html>
+

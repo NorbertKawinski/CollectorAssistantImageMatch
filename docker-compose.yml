@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  elasticsearch:
+    container_name: caim_elasticsearch
+    image: "elasticsearch:7.9.2"
+    environment:
+      - "xpack.ml.enabled=false"
+      - "discovery.type=single-node"
+#    ports:
+#      - "9200:9200"
+    restart: unless-stopped
+
+  caim_server:
+    container_name: caim_imagematch_server
+    build:
+      context: .
+    ports:
+      - "9202:5000"
+    restart: unless-stopped
